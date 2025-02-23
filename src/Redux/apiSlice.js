@@ -20,7 +20,15 @@ export const api = createApi({
         body: { name, id },
       }),
     }),
+    editData: builder.mutation({
+      query: ({ name, id }) => ({
+        url: `${id}`,
+        method: "PUT",
+        body: { name, id },
+      }),
+    }),
   }),
 });
 
-export const { useGetDataQuery, useDeleteDataMutation, usePostDataMutation } = api;
+export const { useGetDataQuery, useDeleteDataMutation, usePostDataMutation, useEditDataMutation } =
+  api;

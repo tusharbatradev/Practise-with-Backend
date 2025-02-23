@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useGetDataQuery } from "./apiSlice";
 
 const userSlice = createSlice({
   name: "users",
